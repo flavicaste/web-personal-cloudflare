@@ -1,6 +1,7 @@
 /**
  * script.js - Flavia Castellano Website
- * Funcionalidades interactivas, modo claro/oscuro, menú responsive y validación.
+ * Interacciones estilo Framer / Portix: Menú móvil, animaciones al scroll,
+ * copia rápida al portapapeles y validación de formulario.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,44 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // 2. Control de Tema (Modo Claro / Modo Oscuro)
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    const savedTheme = localStorage.getItem('fc_theme');
-
-    // Inicializar tema guardado o preferencia del sistema
-    if (savedTheme) {
-        document.body.setAttribute('data-theme', savedTheme);
-        updateThemeIcon(savedTheme);
-    } else {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialTheme = prefersDark ? 'dark' : 'light';
-        document.body.setAttribute('data-theme', initialTheme);
-        updateThemeIcon(initialTheme);
-    }
-
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            const currentTheme = document.body.getAttribute('data-theme') || 'dark';
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            document.body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('fc_theme', newTheme);
-            updateThemeIcon(newTheme);
-            showToast(`Modo ${newTheme === 'dark' ? 'oscuro' : 'claro'} activado`);
-        });
-    }
-
-    function updateThemeIcon(theme) {
-        if (!themeIcon) return;
-        if (theme === 'dark') {
-            themeIcon.className = 'fa-solid fa-moon';
-        } else {
-            themeIcon.className = 'fa-solid fa-sun';
-        }
-    }
-
-    // 3. Menú Móvil Hamburger
+    // 2. Menú Móvil Hamburger
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -64,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 hamburger.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', false);
+                hamburger.setAttribute('aria-expanded', 'false');
             });
         });
 
@@ -73,12 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 hamburger.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', false);
+                hamburger.setAttribute('aria-expanded', 'false');
             }
         });
     }
 
-    // 4. Navegación activa con Intersection Observer
+    // 3. Navegación activa con Intersection Observer
     const sections = document.querySelectorAll('section[id]');
     
     function highlightNavOnScroll() {
@@ -101,24 +65,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     window.addEventListener('scroll', highlightNavOnScroll);
 
-    // 5. Animaciones Scroll Reveal
+    // 4. Animaciones Scroll Reveal
     const revealElements = document.querySelectorAll('.reveal');
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Dejar de observar una vez mostrado
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // 6. Copiar al Portapapeles (Ej. Email)
+    // 5. Copiar al Portapapeles (Email)
     const copyTargets = document.querySelectorAll('.copy-target');
 
     copyTargets.forEach(card => {
@@ -129,9 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     await navigator.clipboard.writeText(textToCopy);
                     const icon = card.querySelector('.copy-icon');
                     if (icon) {
-                        icon.className = 'fa-solid fa-check contact-arrow';
+                        icon.className = 'fa-solid fa-check tile-arrow';
                         setTimeout(() => {
-                            icon.className = 'fa-regular fa-copy contact-arrow copy-icon';
+                            icon.className = 'fa-regular fa-copy tile-arrow copy-icon';
                         }, 2500);
                     }
                     showToast(`Copiado al portapapeles: ${textToCopy}`);
@@ -142,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Formulario de Contacto y Validación
+    // 6. Formulario de Contacto y Validación
     const contactForm = document.getElementById('contact-form');
     const formNotification = document.getElementById('form-notification');
 
@@ -200,28 +164,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!isValid) return;
 
-            // Simulación y fallback con cliente de correo
+            // Preparación del correo mailto
             const recipient = 'flavicaste@hotmail.com';
             const subject = encodeURIComponent(`[Consulta Web] ${asuntoInput.value} - ${nombreInput.value.trim()}`);
             const body = encodeURIComponent(
                 `Nombre: ${nombreInput.value.trim()}\n` +
                 `Email: ${emailInput.value.trim()}\n` +
-                `Asunto: ${asuntoInput.value}\n\n` +
+                `Servicio de interés: ${asuntoInput.value}\n\n` +
                 `Mensaje:\n${mensajeInput.value.trim()}`
             );
 
-            // Mostrar mensaje de éxito en pantalla
+            // Notificación visual de éxito
             formNotification.className = 'form-notification success';
-            formNotification.textContent = '¡Gracias por tu mensaje! Abriendo tu cliente de correo para completar el envío...';
+            formNotification.textContent = '¡Gracias! Abriendo tu gestor de correo para enviar tu mensaje...';
 
             setTimeout(() => {
-                // Abrir cliente de correo predeterminado
                 window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
                 contactForm.reset();
                 setTimeout(() => {
-                    formNotification.textContent = 'Mensaje preparado. ¡Me pondré en contacto contigo a la brevedad!';
+                    formNotification.textContent = 'Mensaje preparado. ¡Responderé a tu consulta a la brevedad!';
                 }, 1500);
-            }, 800);
+            }, 700);
         });
     }
 
@@ -241,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 8. Mensaje Toast
+    // 7. Toast flotante
     function showToast(message) {
         const toast = document.getElementById('toast');
         if (!toast) return;

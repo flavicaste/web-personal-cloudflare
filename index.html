@@ -3,45 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sitio web personal de Flavia Castellano - Analista de Sistemas, Desarrollo Web, WordPress, SQL y Consultoría Tecnológica en Argentina.">
+    <meta name="description" content="Flavia Castellano - Analista de Sistemas, WordPress, SQL & Consultoría Informática en Argentina. Más de 25 años de experiencia.">
     <title>Flavia Castellano | Analista de Sistemas & Soluciones Digitales</title>
-    
-    <!-- Google Fonts -->
+
+    <!-- Google Fonts: Syne (estilo Portix / Framer) & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Hoja de estilos -->
+
+    <!-- Hoja de Estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="dark">
-    <!-- Barra de Navegación -->
+<body>
+    <!-- Barra de Navegación Framer-Style -->
     <header class="header" id="header">
         <div class="container nav-container">
             <a href="#inicio" class="logo" aria-label="Inicio">
-                <span class="logo-accent">&lt;</span>Flavia<span class="logo-accent">/&gt;</span>
+                FLAVIA<span class="logo-dot"></span>
             </a>
 
-            <nav class="nav-menu" id="nav-menu" aria-label="Menú principal">
+            <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal">
                 <ul class="nav-list">
-                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                    <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#inicio" class="nav-link active">INICIO</a></li>
+                    <li><a href="#servicios" class="nav-link">SERVICIOS</a></li>
+                    <li><a href="#sobre-mi" class="nav-link">SOBRE MÍ</a></li>
+                    <li><a href="#experiencia" class="nav-link">EXPERIENCIA</a></li>
+                    <li><a href="#contacto" class="nav-link">CONTACTO</a></li>
                 </ul>
             </nav>
 
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
-                    <i class="fa-solid fa-moon" id="theme-icon"></i>
-                </button>
-                <a href="#contacto" class="btn btn-outline nav-cta">Hablemos</a>
-                <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
-                    <span class="bar"></span>
+                <a href="#contacto" class="btn btn-nav">
+                    <span>HABLEMOS</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
@@ -50,76 +49,193 @@
     </header>
 
     <main>
-        <!-- Sección Principal / Hero -->
-        <section class="hero section" id="inicio">
+        <!-- Sección Hero (Inspirada fielmente en la plantilla PORTIX) -->
+        <section class="hero" id="inicio">
             <div class="container hero-container">
-                <div class="hero-content reveal">
-                    <div class="badge">
-                        <span class="badge-dot"></span>
-                        Disponible para proyectos & consultoría
-                    </div>
-                    <h1 class="hero-title">
-                        Hola, soy <span class="gradient-text">Flavia Castellano</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Analista de Sistemas con más de 25 años de trayectoria profesional independiente. Conecto necesidades de negocio con soluciones digitales eficientes, especializándome en desarrollo web con WordPress, bases de datos SQL y optimización de procesos.
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a href="#contacto" class="btn btn-primary">
-                            <i class="fa-solid fa-paper-plane"></i> Contactar Ahora
-                        </a>
-                        <a href="#servicios" class="btn btn-secondary">
-                            <i class="fa-solid fa-layer-group"></i> Ver Servicios
-                        </a>
-                    </div>
-
-                    <div class="hero-socials">
-                        <span class="social-label">Encuéntrame en:</span>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/flavia-castellano" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Perfil de LinkedIn de Flavia Castellano">
-                                <i class="fa-brands fa-linkedin-in"></i>
+                <div class="hero-grid">
+                    <!-- Columna de Texto -->
+                    <div class="hero-left reveal">
+                        <div class="hero-tag">
+                            <span class="tag-square"></span>
+                            ANALISTA DE SISTEMAS & CONSULTORA
+                        </div>
+                        <h1 class="hero-title">
+                            TECNOLOGÍA QUE <br>
+                            CONVIERTE DESAFÍOS <br>
+                            EN <span class="text-accent">RESULTADOS</span>
+                        </h1>
+                        <p class="hero-description">
+                            Con más de 25 años de trayectoria profesional independiente en Argentina. Especialista en bases de datos relacionales SQL, desarrollo web en WordPress y optimización integral de sistemas para negocios y empresas.
+                        </p>
+                        
+                        <div class="hero-cta-group">
+                            <a href="#contacto" class="btn btn-primary">
+                                <span>CONTACTAR AHORA</span>
+                                <i class="fa-solid fa-arrow-right"></i>
                             </a>
-                            <a href="mailto:flavicaste@hotmail.com" class="social-btn" aria-label="Enviar correo electrónico">
-                                <i class="fa-solid fa-envelope"></i>
+                            <a href="#servicios" class="btn btn-outline">
+                                <span>VER ESPECIALIDADES</span>
                             </a>
-                            <a href="https://wa.me/5491157601860" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Escribir por WhatsApp">
-                                <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+
+                        <!-- Redes Sociales Rápidas -->
+                        <div class="hero-social-strip">
+                            <span class="social-label">CONECTAR:</span>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/flavia-castellano" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="mailto:flavicaste@hotmail.com" title="Enviar Email" aria-label="Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <a href="https://wa.me/5491157601860" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Visual con Círculo Terracota e Insignia Circular -->
+                    <div class="hero-right reveal">
+                        <div class="portrait-wrapper">
+                            <!-- Círculo terracota/cobre de fondo característico de Portix -->
+                            <div class="terracotta-circle"></div>
+
+                            <!-- Tarjeta central de perfil profesional -->
+                            <div class="portrait-card">
+                                <div class="portrait-avatar">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <h3 class="portrait-name">Flavia Castellano</h3>
+                                <p class="portrait-title">Analista de Sistemas</p>
+                                <span class="portrait-location">
+                                    <i class="fa-solid fa-location-dot"></i> Argentina
+                                </span>
+                            </div>
+
+                            <!-- Insignia circular flotante estilo "HIRE ME NOW" -->
+                            <a href="#contacto" class="circular-badge" aria-label="Contactar a Flavia">
+                                <div class="badge-text">
+                                    <span>DISPONIBLE</span>
+                                    <strong>+25 AÑOS</strong>
+                                    <span>CONTACTAR</span>
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="hero-visual reveal">
-                    <div class="avatar-card">
-                        <div class="avatar-glow"></div>
-                        <div class="avatar-inner">
-                            <div class="avatar-icon-wrap">
-                                <i class="fa-solid fa-laptop-code"></i>
-                            </div>
-                            <h3>Flavia Castellano</h3>
-                            <p class="avatar-role">Analista de Sistemas</p>
-                            <div class="avatar-location">
-                                <i class="fa-solid fa-location-dot"></i> Argentina
-                            </div>
-                        </div>
+                <!-- Gran Letrero Tipográfico de Fondo estilo Portix -->
+                <div class="hero-big-name" aria-hidden="true">
+                    <span>FLAVIA CASTELLANO</span>
+                </div>
+            </div>
+        </section>
 
-                        <!-- Tarjetas flotantes estadísticas -->
-                        <div class="floating-badge badge-top">
-                            <i class="fa-solid fa-clock-rotate-left"></i>
-                            <div>
-                                <strong>+25 Años</strong>
-                                <span>Experiencia</span>
-                            </div>
-                        </div>
+        <!-- Barra de Estadísticas Clave -->
+        <section class="stats-bar">
+            <div class="container stats-container">
+                <div class="stat-item reveal">
+                    <span class="stat-number">+25</span>
+                    <span class="stat-label">Años de Trayectoria Autónoma</span>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-item reveal">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Compromiso & Trato Personalizado</span>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-item reveal">
+                    <span class="stat-number">SQL</span>
+                    <span class="stat-label">Gestión Avanzada de Datos</span>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-item reveal">
+                    <span class="stat-number">WP</span>
+                    <span class="stat-label">Desarrollo Web Autogestionable</span>
+                </div>
+            </div>
+        </section>
 
-                        <div class="floating-badge badge-bottom">
-                            <i class="fa-solid fa-check-double"></i>
-                            <div>
-                                <strong>Compromiso</strong>
-                                <span>Soluciones 100% a medida</span>
-                            </div>
+        <!-- Sección Servicios (Cards Estilo Framer con números 01, 02, etc.) -->
+        <section class="services section" id="servicios">
+            <div class="container">
+                <div class="section-top reveal">
+                    <div class="section-tag">
+                        <span class="tag-square"></span>
+                        QUÉ HAGO
+                    </div>
+                    <h2 class="section-title">SERVICIOS & ESPECIALIDADES</h2>
+                    <p class="section-desc">Soluciones digitales estructuradas para modernizar tu negocio y resolver necesidades concretas.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Servicio 01 -->
+                    <div class="service-card reveal">
+                        <div class="service-header">
+                            <span class="service-num">01</span>
+                            <div class="service-icon"><i class="fa-brands fa-wordpress"></i></div>
                         </div>
+                        <h3 class="service-title">Desarrollo Web & WordPress</h3>
+                        <p class="service-text">
+                            Creación de sitios web modernos, responsivos, tiendas online y páginas corporativas optimizadas para buscadores y fáciles de administrar.
+                        </p>
+                        <ul class="service-bullets">
+                            <li><i class="fa-solid fa-arrow-right"></i> Diseño responsive adaptable a cualquier pantalla</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Configuración de hosting y Cloudflare</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Mantenimiento y actualización continua</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 02 -->
+                    <div class="service-card reveal">
+                        <div class="service-header">
+                            <span class="service-num">02</span>
+                            <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+                        </div>
+                        <h3 class="service-title">Bases de Datos & SQL</h3>
+                        <p class="service-text">
+                            Diseño relacional, consultas estructuradas de alto rendimiento, extracción, depuración y migración de datos para toma de decisiones ágiles.
+                        </p>
+                        <ul class="service-bullets">
+                            <li><i class="fa-solid fa-arrow-right"></i> Consultas complejas y reportes analíticos</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Integridad y normalización de bases</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Limpieza y exportación de información</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 03 -->
+                    <div class="service-card reveal">
+                        <div class="service-header">
+                            <span class="service-num">03</span>
+                            <div class="service-icon"><i class="fa-solid fa-file-excel"></i></div>
+                        </div>
+                        <h3 class="service-title">Microsoft Office & Automatización</h3>
+                        <p class="service-text">
+                            Implementación de planillas avanzadas en Excel, fórmulas profesionales, dashboards y automatización de circuitos administrativos repetitivos.
+                        </p>
+                        <ul class="service-bullets">
+                            <li><i class="fa-solid fa-arrow-right"></i> Modelos financieros y de gestión en Excel</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Estandarización de documentación</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Ahorro de tiempo en tareas cotidianas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 04 -->
+                    <div class="service-card reveal">
+                        <div class="service-header">
+                            <span class="service-num">04</span>
+                            <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+                        </div>
+                        <h3 class="service-title">Consultoría & Soporte de Sistemas</h3>
+                        <p class="service-text">
+                            Asistencia técnica profesional, diagnóstico preventivo, análisis de requerimientos de software y capacitación a usuarios y personal de soporte.
+                        </p>
+                        <ul class="service-bullets">
+                            <li><i class="fa-solid fa-arrow-right"></i> Asistencia técnica remota y presencial</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Relevamiento de procesos operativos</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Soporte informático confiable</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -128,339 +244,238 @@
         <!-- Sección Sobre Mí -->
         <section class="about section" id="sobre-mi">
             <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-tag">Conóceme</span>
-                    <h2 class="section-title">Sobre Mí</h2>
-                    <p class="section-subtitle">Pasión por la tecnología, la estructura de datos y el servicio profesional de excelencia.</p>
-                </div>
-
                 <div class="about-grid">
-                    <div class="about-text-card reveal">
-                        <h3>Perfil Profesional</h3>
-                        <p>
-                            Soy graduada como <strong>Analista de Sistemas, Informática, Comunicaciones y Servicios de Asistencia</strong> en el prestigioso <em>Instituto de Formación Docente N° 42</em>.
+                    <div class="about-left reveal">
+                        <div class="section-tag">
+                            <span class="tag-square"></span>
+                            CONÓCEME
+                        </div>
+                        <h2 class="section-title">25 AÑOS DE EXPERIENCIA AL SERVICIO DE TUS PROYECTOS</h2>
+                        <p class="about-lead">
+                            Soy <strong>Flavia Castellano</strong>, Analista de Sistemas graduada en el <em>Instituto de Formación Docente N° 42</em> (especialidad en Informática, comunicaciones y servicios de asistencia).
                         </p>
-                        <p>
-                            Desde <strong>marzo de 2001</strong> y de manera ininterrumpida, me he desempeñado como <strong>profesional autónoma</strong>, brindando soluciones integrales a clientes, pequeñas y medianas empresas, así como a emprendimientos que buscan consolidar su presencia tecnológica.
+                        <p class="about-body">
+                            Desde <strong>marzo de 2001</strong> desarrollo mi labor de manera ininterrumpida como <strong>profesional autónoma</strong>, acompañando a clientes y organizaciones a digitalizar sus procesos, mantener sus plataformas y gestionar sus datos con orden y seguridad.
                         </p>
-                        <p>
-                            Mi enfoque combina rigor analítico, dominio técnico en bases de datos relacionales (SQL), desarrollo de sitios web dinámicos con WordPress y optimización de herramientas ofimáticas y administrativas para potenciar la productividad.
-                        </p>
-
-                        <div class="about-highlights">
-                            <div class="highlight-item">
-                                <i class="fa-solid fa-user-check"></i>
-                                <span>Trato directo y personalizado</span>
+                        <div class="about-pills">
+                            <div class="pill-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Trato directo sin intermediarios</span>
                             </div>
-                            <div class="highlight-item">
-                                <i class="fa-solid fa-shield-halved"></i>
-                                <span>Responsabilidad y confidencialidad</span>
+                            <div class="pill-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Soluciones prácticas y orientadas a resultados</span>
                             </div>
-                            <div class="highlight-item">
-                                <i class="fa-solid fa-lightbulb"></i>
-                                <span>Soluciones prácticas y escalables</span>
+                            <div class="pill-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Máxima dedicación y confidencialidad</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="about-timeline-card reveal">
-                        <h3>Trayectoria & Formación</h3>
-                        
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-icon">
-                                    <i class="fa-solid fa-briefcase"></i>
+                    <div class="about-right reveal">
+                        <div class="skill-stack-card">
+                            <h3 class="stack-title">COMPETENCIAS PRINCIPALES</h3>
+                            <div class="stack-list">
+                                <div class="stack-box">
+                                    <span class="stack-tag">LENGUAJE / BD</span>
+                                    <h4>SQL</h4>
+                                    <p>Consultas, diseño relacional y manejo eficiente de datos.</p>
                                 </div>
-                                <div class="timeline-content">
-                                    <span class="timeline-date">2001 - Presente · +25 años</span>
-                                    <h4>Profesional Autónomo / Consultor</h4>
-                                    <p>Desarrollo de proyectos digitales, mantenimiento de sitios web, gestión y consultas SQL, soporte informático integral y automatización para negocios.</p>
+                                <div class="stack-box">
+                                    <span class="stack-tag">CMS / WEB</span>
+                                    <h4>WordPress</h4>
+                                    <p>Sitios dinámicos, personalización, plugins y mantenimiento.</p>
+                                </div>
+                                <div class="stack-box">
+                                    <span class="stack-tag">PRODUCTIVIDAD</span>
+                                    <h4>Microsoft Office</h4>
+                                    <p>Excel avanzado, automatizaciones y sistematización.</p>
+                                </div>
+                                <div class="stack-box">
+                                    <span class="stack-tag">ANÁLISIS</span>
+                                    <h4>Sistemas & Soporte</h4>
+                                    <p>Comunicaciones, infraestructura y servicios de asistencia.</p>
                                 </div>
                             </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-icon">
-                                    <i class="fa-solid fa-graduation-cap"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <span class="timeline-date">1994 - 2000</span>
-                                    <h4>Analista de Sistemas</h4>
-                                    <span class="timeline-institution">Instituto de Formación Docente N° 42</span>
-                                    <p>Especialización en Informática, comunicaciones y servicios de asistencia tecnológica.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quick-contact-box">
-                            <div class="qcb-text">
-                                <strong>¿Tienes una consulta o proyecto en mente?</strong>
-                                <span>Escríbeme para coordinar una reunión o propuesta personalizada.</span>
-                            </div>
-                            <a href="#contacto" class="btn btn-sm btn-primary">Escribir</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Servicios -->
-        <section class="services section" id="servicios">
+        <!-- Sección Experiencia & Trayectoria -->
+        <section class="experience section" id="experiencia">
             <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-tag">Especialidades</span>
-                    <h2 class="section-title">Servicios & Proyectos</h2>
-                    <p class="section-subtitle">Respuestas tecnológicas sólidas adaptadas a las necesidades reales de cada cliente.</p>
+                <div class="section-top reveal">
+                    <div class="section-tag">
+                        <span class="tag-square"></span>
+                        HISTORIAL
+                    </div>
+                    <h2 class="section-title">EXPERIENCIA & EDUCACIÓN</h2>
+                    <p class="section-desc">Un recorrido continuo de formación y trabajo independiente.</p>
                 </div>
 
-                <div class="services-grid">
-                    <!-- Servicio 1 -->
-                    <div class="service-card reveal">
-                        <div class="service-icon">
-                            <i class="fa-brands fa-wordpress"></i>
+                <div class="timeline-container reveal">
+                    <!-- Item 1 -->
+                    <div class="timeline-row">
+                        <div class="timeline-period">
+                            <span class="badge-year">2001 — PRESENTE</span>
+                            <span class="period-sub">+25 años 9 meses</span>
                         </div>
-                        <h3>Desarrollo Web & WordPress</h3>
-                        <p>Creación y personalización de sitios web modernos, responsivos, tiendas virtuales y landing pages autoadministrables orientadas a resultados.</p>
-                        <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> Diseño adaptativo a móviles</li>
-                            <li><i class="fa-solid fa-check"></i> Optimización de velocidad y SEO</li>
-                            <li><i class="fa-solid fa-check"></i> Mantenimiento y seguridad</li>
-                        </ul>
-                    </div>
-
-                    <!-- Servicio 2 -->
-                    <div class="service-card reveal">
-                        <div class="service-icon">
-                            <i class="fa-solid fa-database"></i>
-                        </div>
-                        <h3>Bases de Datos & SQL</h3>
-                        <p>Diseño conceptual y relacional de bases de datos, consultas complejas, depuración, migración y extracción de información clave para la toma de decisiones.</p>
-                        <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> Consultas SQL estructuradas</li>
-                            <li><i class="fa-solid fa-check"></i> Reportes e integridad de datos</li>
-                            <li><i class="fa-solid fa-check"></i> Optimización y mantenimiento</li>
-                        </ul>
-                    </div>
-
-                    <!-- Servicio 3 -->
-                    <div class="service-card reveal">
-                        <div class="service-icon">
-                            <i class="fa-solid fa-file-excel"></i>
-                        </div>
-                        <h3>Automatización & Microsoft Office</h3>
-                        <p>Implementación de plantillas avanzadas de cálculo en Excel, fórmulas profesionales, macros y sistematización de circuitos administrativos repetitivos.</p>
-                        <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> Modelos de gestión en Excel</li>
-                            <li><i class="fa-solid fa-check"></i> Automatización de planillas</li>
-                            <li><i class="fa-solid fa-check"></i> Reportes ejecutivos claros</li>
-                        </ul>
-                    </div>
-
-                    <!-- Servicio 4 -->
-                    <div class="service-card reveal">
-                        <div class="service-icon">
-                            <i class="fa-solid fa-headset"></i>
-                        </div>
-                        <h3>Consultoría & Soporte de Sistemas</h3>
-                        <p>Asesoramiento técnico continuo para usuarios y empresas, análisis de requerimientos de software y soporte informático operativo y preventivo.</p>
-                        <ul class="service-features">
-                            <li><i class="fa-solid fa-check"></i> Asistencia técnica remota y presencial</li>
-                            <li><i class="fa-solid fa-check"></i> Relevamiento de procesos</li>
-                            <li><i class="fa-solid fa-check"></i> Capacitación a usuarios finales</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección Habilidades -->
-        <section class="skills section" id="habilidades">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-tag">Competencias</span>
-                    <h2 class="section-title">Aptitudes Principales</h2>
-                    <p class="section-subtitle">Tecnologías y herramientas aplicadas en cada solución.</p>
-                </div>
-
-                <div class="skills-grid reveal">
-                    <div class="skill-pill">
-                        <div class="skill-icon-wrap"><i class="fa-solid fa-database"></i></div>
-                        <div class="skill-info">
-                            <span class="skill-name">SQL</span>
-                            <span class="skill-category">Bases de Datos & Consultas</span>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="card-role">Profesional Autónomo / Consultora</div>
+                            <div class="card-company">Servicios Informáticos Independientes</div>
+                            <p class="card-text">
+                                Desarrollo de soluciones web personalizadas con WordPress, modelado de consultas SQL, optimización con herramientas de oficina y asistencia informática continua a clientes particulares y pymes.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="skill-pill">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-wordpress"></i></div>
-                        <div class="skill-info">
-                            <span class="skill-name">WordPress</span>
-                            <span class="skill-category">CMS & Sitios Autogestionables</span>
+                    <!-- Item 2 -->
+                    <div class="timeline-row">
+                        <div class="timeline-period">
+                            <span class="badge-year">1994 — 2000</span>
+                            <span class="period-sub">Formación Académica</span>
                         </div>
-                    </div>
-
-                    <div class="skill-pill">
-                        <div class="skill-icon-wrap"><i class="fa-solid fa-table"></i></div>
-                        <div class="skill-info">
-                            <span class="skill-name">Microsoft Office</span>
-                            <span class="skill-category">Excel Avanzado & Gestión</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-pill">
-                        <div class="skill-icon-wrap"><i class="fa-solid fa-diagram-project"></i></div>
-                        <div class="skill-info">
-                            <span class="skill-name">Análisis de Sistemas</span>
-                            <span class="skill-category">Lógica & Modelado de Procesos</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-pill">
-                        <div class="skill-icon-wrap"><i class="fa-brands fa-html5"></i></div>
-                        <div class="skill-info">
-                            <span class="skill-name">Desarrollo Web</span>
-                            <span class="skill-category">HTML5, CSS3 & JavaScript</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-pill">
-                        <div class="skill-icon-wrap"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                        <div class="skill-info">
-                            <span class="skill-name">Soporte y Asistencia</span>
-                            <span class="skill-category">Servicios Informáticos</span>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="card-role">Analista de Sistemas</div>
+                            <div class="card-company">Instituto de Formación Docente N° 42</div>
+                            <p class="card-text">
+                                Especialidad en Informática, comunicaciones y servicios de asistencia técnica y soporte integral de sistemas.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Contacto -->
+        <!-- Sección Contacto (Minimalista, impactante) -->
         <section class="contact section" id="contacto">
             <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-tag">Comunícate</span>
-                    <h2 class="section-title">Contáctame</h2>
-                    <p class="section-subtitle">Conversemos sobre cómo puedo ayudarte en tu próximo desafío digital.</p>
-                </div>
+                <div class="contact-box reveal">
+                    <div class="contact-header">
+                        <div class="section-tag">
+                            <span class="tag-square"></span>
+                            TRABAJEMOS JUNTOS
+                        </div>
+                        <h2 class="contact-big-title">¿TIENES UN PROYECTO O CONSULTA?</h2>
+                        <p class="contact-subtitle">
+                            Hablemos sobre cómo puedo ayudarte a implementar la solución tecnológica que necesitas.
+                        </p>
+                    </div>
 
-                <div class="contact-grid">
-                    <!-- Información y Redes -->
-                    <div class="contact-info reveal">
-                        <h3>Información de Contacto</h3>
-                        <p>No dudes en enviarme un mensaje o conectarte a través de mis canales directos:</p>
-
-                        <div class="contact-cards">
-                            <a href="https://www.linkedin.com/in/flavia-castellano" target="_blank" rel="noopener noreferrer" class="contact-card">
-                                <div class="contact-icon">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-type">LinkedIn</span>
-                                    <span class="contact-val">flavia-castellano</span>
-                                </div>
-                                <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
-                            </a>
-
-                            <div class="contact-card copy-target" data-copy="flavicaste@hotmail.com" title="Clic para copiar email">
-                                <div class="contact-icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-type">Correo Electrónico</span>
-                                    <span class="contact-val">flavicaste@hotmail.com</span>
-                                </div>
-                                <i class="fa-regular fa-copy contact-arrow copy-icon"></i>
+                    <div class="contact-details-grid">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/flavia-castellano" target="_blank" rel="noopener noreferrer" class="contact-tile">
+                            <div class="tile-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="tile-info">
+                                <span class="tile-label">LINKEDIN</span>
+                                <span class="tile-val">flavia-castellano</span>
                             </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square tile-arrow"></i>
+                        </a>
 
-                            <a href="https://wa.me/5491157601860" target="_blank" rel="noopener noreferrer" class="contact-card">
-                                <div class="contact-icon">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-type">Teléfono / WhatsApp</span>
-                                    <span class="contact-val">011 5760-1860</span>
-                                </div>
-                                <i class="fa-brands fa-whatsapp contact-arrow"></i>
-                            </a>
+                        <!-- Email con Copia Rápida -->
+                        <div class="contact-tile copy-target" data-copy="flavicaste@hotmail.com" title="Clic para copiar email">
+                            <div class="tile-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="tile-info">
+                                <span class="tile-label">EMAIL (CLIC PARA COPIAR)</span>
+                                <span class="tile-val">flavicaste@hotmail.com</span>
+                            </div>
+                            <i class="fa-regular fa-copy tile-arrow copy-icon"></i>
+                        </div>
 
-                            <div class="contact-card">
-                                <div class="contact-icon">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-type">Ubicación</span>
-                                    <span class="contact-val">Muñoz 2345, Argentina</span>
-                                </div>
+                        <!-- WhatsApp / Teléfono -->
+                        <a href="https://wa.me/5491157601860" target="_blank" rel="noopener noreferrer" class="contact-tile">
+                            <div class="tile-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="tile-info">
+                                <span class="tile-label">WHATSAPP / TELÉFONO</span>
+                                <span class="tile-val">011 5760-1860</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right tile-arrow"></i>
+                        </a>
+
+                        <!-- Ubicación -->
+                        <div class="contact-tile">
+                            <div class="tile-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="tile-info">
+                                <span class="tile-label">UBICACIÓN</span>
+                                <span class="tile-val">Muñoz 2345, Argentina</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Formulario de Contacto -->
-                    <div class="contact-form-wrap reveal">
-                        <h3>Envíame un Mensaje</h3>
-                        <form id="contact-form" class="contact-form" novalidate>
-                            <div class="form-group">
-                                <label for="nombre">Nombre Completo *</label>
-                                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                    <!-- Formulario de Contacto Directo -->
+                    <form id="contact-form" class="framer-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="nombre">TU NOMBRE *</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Gómez" required>
                                 <span class="form-error" id="nombre-error"></span>
                             </div>
-
-                            <div class="form-group">
-                                <label for="email">Correo Electrónico *</label>
+                            <div class="form-field">
+                                <label for="email">TU CORREO ELECTRÓNICO *</label>
                                 <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
                                 <span class="form-error" id="email-error"></span>
                             </div>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="asunto">Asunto o Servicio de Interés *</label>
-                                <select id="asunto" name="asunto" required>
-                                    <option value="" disabled selected>Selecciona un asunto...</option>
-                                    <option value="Desarrollo Web / WordPress">Desarrollo Web / WordPress</option>
-                                    <option value="Bases de Datos & SQL">Bases de Datos & SQL</option>
-                                    <option value="Automatización / Excel / Office">Automatización / Excel / Office</option>
-                                    <option value="Consultoría Informática">Consultoría & Soporte Informático</option>
-                                    <option value="Otro motivo">Otro motivo</option>
-                                </select>
-                                <span class="form-error" id="asunto-error"></span>
-                            </div>
+                        <div class="form-field">
+                            <label for="asunto">SERVICIO DE INTERÉS *</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="Desarrollo Web / WordPress">Desarrollo Web & WordPress</option>
+                                <option value="Bases de Datos & SQL">Bases de Datos & SQL</option>
+                                <option value="Automatización / Excel">Automatización en Excel / Office</option>
+                                <option value="Consultoría / Soporte Informático">Consultoría / Asistencia de Sistemas</option>
+                                <option value="Otro motivo">Otro motivo</option>
+                            </select>
+                            <span class="form-error" id="asunto-error"></span>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="mensaje">Mensaje *</label>
-                                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre tu proyecto o consulta..." required></textarea>
-                                <span class="form-error" id="mensaje-error"></span>
-                            </div>
+                        <div class="form-field">
+                            <label for="mensaje">MENSAJE *</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente lo que necesitas..." required></textarea>
+                            <span class="form-error" id="mensaje-error"></span>
+                        </div>
 
-                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit">
-                                <span>Enviar Mensaje</span>
-                                <i class="fa-solid fa-paper-plane"></i>
-                            </button>
+                        <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+                            <span>ENVIAR MENSAJE</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
 
-                            <div class="form-notification" id="form-notification" role="alert"></div>
-                        </form>
-                    </div>
+                        <div class="form-notification" id="form-notification" role="alert"></div>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Pie de página -->
+    <!-- Footer Framer -->
     <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <span class="logo"><span class="logo-accent">&lt;</span>Flavia Castellano<span class="logo-accent">/&gt;</span></span>
-                <p>Analista de Sistemas · Soluciones informáticas y desarrollo web</p>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="#inicio" class="logo">FLAVIA<span class="logo-dot"></span></a>
+                <p>Analista de Sistemas · Soluciones tecnológicas a medida en Argentina.</p>
             </div>
-            
-            <div class="footer-links">
+
+            <div class="footer-nav">
                 <a href="#inicio">Inicio</a>
-                <a href="#sobre-mi">Sobre Mí</a>
                 <a href="#servicios">Servicios</a>
-                <a href="#habilidades">Habilidades</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#experiencia">Experiencia</a>
                 <a href="#contacto">Contacto</a>
             </div>
 
-            <div class="footer-copy">
+            <div class="footer-bottom">
                 <p>&copy; <span id="current-year"></span> Flavia Castellano. Todos los derechos reservados.</p>
-                <p class="footer-sub">Desarrollado con estándares web modernos y diseño responsive.</p>
+                <a href="#inicio" class="back-top" title="Volver arriba">
+                    <span>Subir</span>
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
             </div>
         </div>
     </footer>
@@ -468,7 +483,7 @@
     <!-- Toast de Notificaciones -->
     <div id="toast" class="toast"></div>
 
-    <!-- Script Principal -->
+    <!-- Script de Interactividad -->
     <script src="script.js"></script>
 </body>
 </html>
